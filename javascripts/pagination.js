@@ -1,3 +1,4 @@
+/*<![CDATA[*/t
 function looppagecurrentg(e) {
     var a = "";
     pageNumber = parseInt(numPages / 2), pageNumber == numPages - pageNumber && (numPages = 2 * pageNumber + 1), pageStart = currentPageNo - pageNumber, pageStart < 1 && (pageStart = 1), lastPageNo = parseInt(e / perPage) + 1, lastPageNo - 1 == e / perPage && (lastPageNo -= 1), pageEnd = pageStart + numPages - 1, pageEnd > lastPageNo && (pageEnd = lastPageNo), a += "<li class='pages'>Page " + currentPageNo + " of " + lastPageNo + "</li>";
@@ -32,7 +33,7 @@ function redirectlabel(e) {
     jsonstart = (e - 1) * perPage, noPage = e;
     var a = document.getElementsByTagName("head")[0],
         t = document.createElement("script");
-    t.type = "text/javascript", t.setAttribute("src", postLabel + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
+    t.type = "text/javascript", t.setAttribute("src", home_page + "feeds/posts/summary/-/" + "Хоолны%20тулаан" + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
 }
 
 function finddatepost(e) {
@@ -46,3 +47,4 @@ function finddatepost(e) {
 "undefined" == typeof firstText && (firstText = "First"), "undefined" == typeof lastText && (lastText = "Last");
 var noPage, currentPage, currentPageNo, postLabel;
 pagecurrentg();
+/*]]>*/
