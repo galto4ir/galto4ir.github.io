@@ -33,7 +33,7 @@ function redirectlabel(e) {
     jsonstart = (e - 1) * perPage, noPage = e;
     var a = document.getElementsByTagName("head")[0],
         t = document.createElement("script");
-    var postLabel = location.pathname.split("/")[3];
+    console.log("working");
     t.type = "text/javascript", t.setAttribute("src", home_page + "feeds/posts/summary/-/" + postLabel + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
 }
 
@@ -42,7 +42,7 @@ function finddatepost(e) {
     var a = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29),
         t = encodeURIComponent(a);
     if ("page" == currentPage) var r = "/search?updated-max=" + t + "&max-results=" + perPage + "#PageNo=" + noPage;
-    else var r = postLabel + location.pathname.split("/")[3] + "?updated-max=" + t + "&max-results=" + perPage + "#PageNo=" + noPage;
+    else var r = "/search/label/" + location.pathname.split("/")[3] + "?updated-max=" + t + "&max-results=" + perPage + "#PageNo=" + noPage;
     location.href = r
 }
 "undefined" == typeof firstText && (firstText = "First"), "undefined" == typeof lastText && (lastText = "Last");
