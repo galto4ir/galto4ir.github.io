@@ -1,4 +1,4 @@
-/*<![CDATA[*/t
+
 function looppagecurrentg(e) {
     var a = "";
     pageNumber = parseInt(numPages / 2), pageNumber == numPages - pageNumber && (numPages = 2 * pageNumber + 1), pageStart = currentPageNo - pageNumber, pageStart < 1 && (pageStart = 1), lastPageNo = parseInt(e / perPage) + 1, lastPageNo - 1 == e / perPage && (lastPageNo -= 1), pageEnd = pageStart + numPages - 1, pageEnd > lastPageNo && (pageEnd = lastPageNo), a += "<li class='pages'>Page " + currentPageNo + " of " + lastPageNo + "</li>";
@@ -47,4 +47,3 @@ function finddatepost(e) {
 "undefined" == typeof firstText && (firstText = "First"), "undefined" == typeof lastText && (lastText = "Last");
 var noPage, currentPage, currentPageNo, postLabel;
 pagecurrentg();
-/*]]>*/
