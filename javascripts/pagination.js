@@ -42,7 +42,7 @@ function finddatepost(e) {
     var a = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29),
         t = encodeURIComponent(a);
     if ("page" == currentPage) var r = "/search?updated-max=" + t + "&max-results=" + perPage + "#PageNo=" + noPage;
-    else var r = "/search/label/" + postLabel + "?updated-max=" + t + "&max-results=" + perPage + "#PageNo=" + noPage;
+    else var r = "/search/label/" + location.pathname.split("/")[3] + "?updated-max=" + t + "&max-results=" + perPage + "#PageNo=" + noPage;
     location.href = r
 }
 "undefined" == typeof firstText && (firstText = "First"), "undefined" == typeof lastText && (lastText = "Last");
