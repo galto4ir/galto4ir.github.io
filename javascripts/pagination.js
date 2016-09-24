@@ -33,7 +33,7 @@ function redirectlabel(e) {
     jsonstart = (e - 1) * perPage, noPage = e;
     var a = document.getElementsByTagName("head")[0],
         t = document.createElement("script");
-    console.log(home);
+    console.log(home_page);
     t.type = "text/javascript", t.setAttribute("src", "/feeds/posts/summary/-/" + window.location.pathname.split("/")[3] + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
 }
 
