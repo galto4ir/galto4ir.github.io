@@ -18,7 +18,7 @@ function totalcountdata(e) {
 }
 
 function pagecurrentg() {
-    var e = urlactivepage; - 1 != e.indexOf("/search/label/") && (postLabel = -1 != e.indexOf("?updated-max") ? e.substring(e.indexOf("/search/label/") + 14, e.indexOf("?updated-max")) : e.substring(e.indexOf("/search/label/") + 14, e.indexOf("?&max"))), -1 == e.indexOf("?q=") && -1 == e.indexOf(".html") && (-1 == e.indexOf("/search/label/") ? (currentPage = "page", currentPageNo = -1 != urlactivepage.indexOf("#PageNo=") ? urlactivepage.substring(urlactivepage.indexOf("#PageNo=") + 8, urlactivepage.length) : 1, document.write('<script src="' + home_page + 'feeds/posts/summary?max-results=1&alt=json-in-script&callback=totalcountdata"></script>')) : (currentPage = "label", -1 == e.indexOf("&max-results=") && (perPage = 20), currentPageNo = -1 != urlactivepage.indexOf("#PageNo=") ? urlactivepage.substring(urlactivepage.indexOf("#PageNo=") + 8, urlactivepage.length) : 1, document.write('<script src="' + home_page + "feeds/posts/summary/-/" + postLabel + '?alt=json-in-script&callback=totalcountdata&max-results=1" ></script>')))
+    var e = urlactivepage; - 1 != e.indexOf("/search/label/") && (postLabel = -1 != e.indexOf("?updated-max") ? e.substring(e.indexOf("/search/label/") + 14, e.indexOf("?updated-max")) : e.substring(e.indexOf("/search/label/") + 14, e.indexOf("?&max"))), -1 == e.indexOf("?q=") && -1 == e.indexOf(".html") && (-1 == e.indexOf("/search/label/") ? (currentPage = "page", currentPageNo = -1 != urlactivepage.indexOf("#PageNo=") ? urlactivepage.substring(urlactivepage.indexOf("#PageNo=") + 8, urlactivepage.length) : 1, document.write('<script src="' + home_page + 'feeds/posts/summary?max-results=1&alt=json-in-script&callback=totalcountdata"></script>')) : (currentPage = "label", -1 == e.indexOf("&max-results=") && (perPage = 20), currentPageNo = -1 != urlactivepage.indexOf("#PageNo=") ? urlactivepage.substring(urlactivepage.indexOf("#PageNo=") + 8, urlactivepage.length) : 1, document.write('<script src="' + postLabel + '?alt=json-in-script&callback=totalcountdata&max-results=1" ></script>')))
 }
 
 function redirectpage(e) {
@@ -32,7 +32,6 @@ function redirectlabel(e) {
     jsonstart = (e - 1) * perPage, noPage = e;
     var a = document.getElementsByTagName("head")[0],
         t = document.createElement("script");
- 	var postLabel = location.pathname.split("/")[3];
     t.type = "text/javascript", t.setAttribute("src", home_page + "feeds/posts/summary/-/" + postLabel + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
 }
 
