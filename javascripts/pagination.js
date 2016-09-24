@@ -34,7 +34,7 @@ function redirectlabel(e) {
     var a = document.getElementsByTagName("head")[0],
         t = document.createElement("script");
     console.log("working");
-    t.type = "text/javascript", t.setAttribute("src", home_page + "feeds/posts/summary/-/" + postLabel + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
+    t.type = "text/javascript", t.setAttribute("src", home_page + "feeds/posts/summary/-/" + location.pathname.split("/")[3] + "?start-index=" + jsonstart + "&max-results=1&alt=json-in-script&callback=finddatepost"), a.appendChild(t)
 }
 
 function finddatepost(e) {
