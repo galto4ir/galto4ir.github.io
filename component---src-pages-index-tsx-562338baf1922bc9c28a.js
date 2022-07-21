@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgalto4ir_github_io=self.webpackChunkgalto4ir_github_io||[]).push([[691],{7200:function(e,t,a){a.r(t);var c=a(7294);t.default=function(e){return c.createElement("main",{className:"flex items-center justify-center h-screen w-screen"},c.createElement("h3",{className:"text-xl"},c.createElement("code",null,"Galt-Ochir Davaa ","<galto4ir@gmail.com>")))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-562338baf1922bc9c28a.js.map
