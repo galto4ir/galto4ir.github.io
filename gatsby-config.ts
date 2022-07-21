@@ -47,6 +47,12 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "https://cdn.tailwindcss.com", // Change to the script filename
+      },
+    },
   ],
 };
 

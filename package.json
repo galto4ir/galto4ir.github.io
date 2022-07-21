@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -22,6 +22,7 @@
     "gatsby": "^4.19.1",
     "gatsby-plugin-google-analytics": "^4.19.0",
     "gatsby-plugin-image": "^2.19.0",
+    "gatsby-plugin-load-script": "^1.1.0",
     "gatsby-plugin-manifest": "^4.19.0",
     "gatsby-plugin-mdx": "^3.19.0",
     "gatsby-plugin-postcss": "^5.19.0",
