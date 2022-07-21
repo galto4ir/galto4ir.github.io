@@ -1,9 +1,9 @@
 {
-  "name": "galt-ochir-davaa",
+  "name": "galto4ir.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "galt-ochir-davaa",
-  "author": "Galt Davaa",
+  "description": "GaltOchir portfolio",
+  "author": "Galt Davaa <galto4ir@gmail.com>",
   "keywords": [
     "gatsby"
   ],
