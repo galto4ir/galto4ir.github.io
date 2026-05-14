@@ -1,55 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galt-Ochir Davaa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    const REDIRECT_URL = "https://galto4ir.dev";
-    const REDIRECT_SECONDS = 5;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galt-Ochir Davaa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const REDIRECT_URL = "https://galto4ir.dev";
+      const REDIRECT_SECONDS = 5;
 
-    let countdown = REDIRECT_SECONDS;
-    let timerId = null;
+      let countdown = REDIRECT_SECONDS;
+      let timerId = null;
 
-    function redirect() {
-      if (timerId) clearInterval(timerId);
-      window.location.href = REDIRECT_URL;
-    }
+      function redirect() {
+        if (timerId) clearInterval(timerId);
+        window.location.href = REDIRECT_URL;
+      }
 
-    function tick() {
-      countdown -= 1;
-      const el = document.getElementById("countdown");
-      const unit = document.getElementById("unit");
-      if (el) el.textContent = countdown;
-      if (unit) unit.textContent = countdown === 1 ? "second" : "seconds";
-      if (countdown <= 0) redirect();
-    }
+      function tick() {
+        countdown -= 1;
+        const el = document.getElementById("countdown");
+        const unit = document.getElementById("unit");
+        if (el) el.textContent = countdown;
+        if (unit) unit.textContent = countdown === 1 ? "second" : "seconds";
+        if (countdown <= 0) redirect();
+      }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("enter-btn").addEventListener("click", redirect);
-      timerId = setInterval(tick, 1000);
-    });
-  </script>
-</head>
-<body>
-  <main class="flex flex-col items-center justify-center h-screen w-screen gap-6">
-    <h3 class="text-xl">
-      <code>Galt-Ochir Davaa &lt;galto4ir@gmail.com&gt;</code>
-    </h3>
-
-    <p class="text-base text-gray-600">
-      Redirecting to <code>https://galto4ir.dev</code> in
-      <span id="countdown" class="font-semibold">5</span>
-      <span id="unit">seconds</span>...
-    </p>
-
-    <button
-      id="enter-btn"
-      class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+      window.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("enter-btn")
+          .addEventListener("click", redirect);
+        timerId = setInterval(tick, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <main
+      class="flex flex-col items-center justify-center h-screen w-screen gap-6"
     >
-      Enter Website
-    </button>
-  </main>
-</body>
+      <h3 class="text-xl">
+        <code>
+          Galt-Ochir Davaa &lt;<a
+            href="mailto:d.galtochir@gmail.com"
+            class="underline hover:text-blue-600 transition-colors"
+            >d.galtochir@gmail.com</a
+          >&gt;
+        </code>
+      </h3>
+
+      <p class="text-base text-gray-600">
+        Redirecting to <code>https://galto4ir.dev</code> in
+        <span id="countdown" class="font-semibold">5</span>
+        <span id="unit">seconds</span>...
+      </p>
+
+      <button
+        id="enter-btn"
+        class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+      >
+        Enter Website
+      </button>
+    </main>
+  </body>
 </html>
